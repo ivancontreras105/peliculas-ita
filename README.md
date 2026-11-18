@@ -25,3 +25,16 @@
 ### Configurar una colección en el DatabaseContext
 
     modelBuilder.Entity<Pelicula>().ToCollection("peliculas");
+
+### Configurar Program.cs
+Antes de builder.Build
+```
+builder.Services.Configure<JsonOptions>(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+builder.Services.AddCors(cors => cors.AddDefaultPolicy(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()));
+builder.Services.ConfigureMongoDb(builder.Configuration);
+builder.Services.ConfigureRepositories();
+```
+Después de builder.Build
+```
+app.UseCors();
+```
