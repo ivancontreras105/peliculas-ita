@@ -14,7 +14,7 @@
     }
 
 ### Sitio de películas
-[The Movie Database](https://www.themoviedb.org/)
+<a href="https://www.themoviedb.org/" target="_blank">The Movie Database</a>
 
 ### Crear un proyecto
 
